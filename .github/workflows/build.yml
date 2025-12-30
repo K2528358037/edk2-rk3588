@@ -47,7 +47,10 @@ jobs:
           # - rock-5bplus
           # - station-m3
           - lemonpi-pi1
-        CONFIGURATION: "Debug"
+        CONFIGURATION: 
+          - Release
+        #${{ fromJSON(format('[{0}]', inputs.build-configs || '"Debug"')) }}
+        
     steps:
       - name: Checkout
         uses: actions/checkout@v4
