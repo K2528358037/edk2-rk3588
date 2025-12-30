@@ -1,9 +1,7 @@
 name: Release
 on:
-  push:
-    tags:
-      - '*'
   workflow_dispatch:
+  
 jobs:
   build_for_release:
     uses: ./.github/workflows/build.yml
